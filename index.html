@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Management Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="dashboard-header">
+            <h1>Application Management Dashboard</h1>
+            <p class="header-subtitle">Manage and track application statuses</p>
+        </header>
+
+        <div class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" id="total-count">0</div>
+                    <div class="stat-label">Total Applications</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="new-count">0</div>
+                    <div class="stat-label">New Applications</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="shortlisted-count">0</div>
+                    <div class="stat-label">Shortlisted</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="rejected-count">0</div>
+                    <div class="stat-label">Rejected</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="actions-section">
+            <button class="btn btn--primary" id="export-csv">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="7,10 12,15 17,10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                Export as CSV
+            </button>
+        </div>
+
+        <div class="applications-section">
+            <h2>Applications</h2>
+            <div class="applications-grid" id="applications-grid">
+                <!-- Applications will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
